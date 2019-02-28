@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content=" 不超过150个字符"/>
+    <meta name="keywords" content=""/>
+    <meta name="author" content="name, email@gmail.com"/>
+    <meta name="robots" content="index,follow"/>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-itunes-app" content="app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telphone=no, email=no"/>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="MobileOptimized" content="320">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <title>爱儿康</title>
+    <link rel="stylesheet" href="swiper.min.css" />
+    <link href="womanDay.css" rel="stylesheet">
+<script>
+    (function(){
+        var h="orientationchange" in window ? "orientationchange" : "resize";
+        var d=function(){
+            var w=document.documentElement.clientWidth;
+            if(!w){return}
+            var size=(w/320)*20;
+            document.documentElement.style.fontSize=(size>40?40:size)+"px";
+        }
+        if(!window.addEventListener){return}
+        window.addEventListener(h,d);
+        d();
+    })()
+</script>
+<script src="jquery.min.js"></script>
+<script src="swiper.min.js"></script>
+</head>
+<body>
+    <div class="top">
+        <img src="img/banner.png" alt="" />
+    </div>
+    <div class="warpper">
+    <h2 class="happey-tit">爱儿康恭祝大家：三八节快乐！</h2>
+        <div id="container">
+            <ul id="oUl">
+                <li class="act lottery-0"><img src="img/icon1.png" alt="" /><p>问诊券</p></li>
+                <li class="lottery-1"><img src="img/icon2.png" alt="" /><p>现金红包</p></li>
+                <li class="lottery-2"><img src="img/icon3.png" alt="" /><p>10个积分</p></li>
+
+                <li class="lottery-7"><img src="img/icon2.png" alt="" /><p>现金红包</p></li>
+                <a href="javascript:LotteryTap()" id="lotStart">开始抽奖</a>
+                <li class="lottery-3"><img src="img/icon2.png" alt="" /><p>现金红包</p></li>
+
+                <li class="lottery-6"><img src="img/icon5.png" alt="" /><p>代金券</p></li>
+                <li class="lottery-5"><img src="img/icon2.png" alt="" /><p>现金红包</p></li>
+                <li class="lottery-4"><img src="img/icon4.png" alt="" /><p>充值6折</p></li>
+            </ul>
+        </div>
+        <div class="lottery-rules">
+            <a href="rules.html">活动规则</a>
+            <a href="#" class="fr">赚取积分</a>
+        </div>
+        <div class="lottery">
+            <h3><b>&raquo;&raquo;中奖名单</b><a href="#"><img src="img/record.png" alt="" /></a></h3>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <p>恭喜<b>宝宝1</b>中奖 <span>2019-1-4 15:17</span></p>
+                    </div>
+                    <div class="swiper-slide">
+                        <p>恭喜<b>宝宝2</b>中奖 <span>2019-1-4 15:17</span></p>
+                    </div>
+                    <div class="swiper-slide">
+                        <p>恭喜<b>宝宝3</b>中奖 <span>2019-1-4 15:17</span></p>
+                    </div>
+                    <div class="swiper-slide">
+                        <p>恭喜<b>宝宝4</b>抽到代金券一张 <span>2019-1-4 15:17</span></p>
+                    </div>
+                    <div class="swiper-slide">
+                        <p>恭喜<b>宝宝5</b>中奖 <span>2019-1-4 15:17</span></p>
+                    </div>
+                    <div class="swiper-slide">
+                        <p>恭喜<b>宝宝6</b>中奖 <span>2019-1-4 15:17</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="alert-warpper" id="alert">
+            <div class="alert-bg"></div>
+            <div class="alert-main">
+                <img src="img/alert01.png" />
+               <section>运气感爆棚！<br/>恭喜您获得50元现金红包</section>
+               <div class="alert-btn">
+                    <button type="button" onclick="location.href='http://www.baidu.com'">去领奖</button>
+                    <a onclick="shareToast()">立即分享</a>
+               </div>
+               <p>分享可得一次免费抽奖机会，赶紧分享给朋友吧！</p>
+                <div class="alert-close">
+                    <s></s><i onclick="Toastclose('alert')"></i>
+                </div>
+            </div>
+    </div>
+    <div class="alert-warpper" id="Toast2">
+        <div class="alert-bg"></div>
+        <div class="alert-main">
+            <img src="img/alert02.png" />
+           <section>您当前积分：521<br/>此次消耗50个积分</section>
+           <div class="alert-btn">
+                <a style="width:100%" onclick="ToastHide('Toast2')">确定</a>
+           </div>
+
+        </div>
+    </div>
+<!-- 分享弹窗 开始 -->
+    <div id="mcover" style="display: none;" onclick="this.style.display='none'">
+        <img src="img/tishi.png" alt="" />
+    </div>
+<!-- 分享弹窗  结束 -->
+</body>
+<script>
+/*九宫格抽奖  开始*/
+var click=false; //是否开始抽奖；
+var num=0;//抽奖的次数；
+var share=false;//是否分享；
+var speed=20 //转动的初始速度；
+var prize=-1; //中奖位置；
+var timer=null;//setTimer设置的时间；
+var times=0;//当前转动的次数；
+var sums=30;//总基本转动次数；
+var index=0;//当前转动的位置；
+var length=$("#oUl li").length;//位置总数；
+
+function rotate(){
+   for(var i=0;i<length;i++){
+    $("#oUl li").eq(i).removeClass('act');
+   }
+    index+=1;
+    if(index>length-1){index=0}
+    $("#oUl").find(".lottery-"+index+"").addClass('act');
+
+    return false;
+}
+
+function roll(){
+    times+=1;
+    rotate();
+    if(times>sums+10&&prize==index){
+        clearTimeout(timer);
+        clearInterval(timer);
+        var acon=$(".lottery-"+prize+"").find("p").text();
+        prize=-1;
+        times=0;
+        if(share==true){
+            $("#alert p").hide();
+            $("#alert").find(".alert-btn a").hide();
+            $("#alert").find(".alert-btn button").css("width","100%");
+        }else{
+            $("#alert p").show();
+            $("#alert").find(".alert-btn a").show();
+            $("#alert").find(".alert-btn button").css("width","50%");
+        }
+        $("#alert").show();
+        $("#lotStart").text("继续抽奖");
+        click=false;
+    }else{
+        if(times<sums){
+            speed-=10;
+        }else if(times==sums){
+            var idx=Math.random()*length|0;
+            prize=idx;
+            console.log(prize,"prize")
+        }else{
+            if(times>sums+10&&((prize==0&&index==7)||prize==index+1)){
+                speed+=110;
+            }else{
+               speed += 20;
+            }
+        }
+        if(speed<=40){speed=40;}
+        timer=setTimeout(roll,speed)
+    }
+    return false;
+}
+
+function LotteryTap(){
+    if(click){
+        return false;
+    }else{
+       num++;
+        if(num>1){
+            $("#Toast2").show();
+        }else{
+            speed=100;
+            roll();
+            $("#lotStart").text("抽奖中");
+            click=true;
+        }
+        return false;
+    }
+}
+
+/*九宫格抽奖  结束*/
+
+var mySwiper = new Swiper('.swiper-container', {
+    autoplay: 1000,
+    direction : 'vertical',
+    autoplayDisableOnInteraction:false,
+    loop:true,
+    slidesPerView:5,
+    observer:true,
+    ovserveParents:false
+})
+/*中奖名单 结束*/
+
+/*弹窗  开始*/
+//中奖关闭弹窗
+function Toastclose(el){
+    $("#"+el).hide();
+}
+//消耗积分弹窗
+function ToastHide(el){
+    $("#"+el).hide();
+    if(click){
+        return false;
+    }else{
+        speed=100;
+        roll();
+        $("#lotStart").text("抽奖中");
+        click=true;
+    }
+}
+
+function shareToast(){
+    $("#mcover").show();
+    share=true;
+}
+
+/*弹窗  结束*/
+
+</script>
+</html>

@@ -1,0 +1,321 @@
+@charset "UTF-8";
+
+div,p,a,img,ul,li,ol,s,h1,h2,h3,h4,h5,h6,dl,dd,td,table,tbody,thead,tr,th,b,i,article,span,textarea,input,button,select,section,body,html,footer,nav,header,option,video,audio,caption,label{margin:0;padding:0;border:0;outline:none;}
+body{
+    font-family:"Microsoft Yahei";
+    line-height:1.5;
+    font-size:20px;
+    color:#fff;
+}
+/*html{-webkit-text-size-adjust: auto;}*/
+a,a:hover{text-decoration:none;}
+h3{font-weight:normal;}
+ul,li{list-style:none;}
+.fl{float:left;}
+.fr{float:right;}
+.warpper{
+    max-width:720px;
+    margin:-10px auto 0;
+    position:relative;
+    background:url(img/bg.png) no-repeat center;
+    background-size:100% 100%;
+    min-height:300px;
+    padding:20px 0;
+    overflow:hidden;
+}
+.top{
+    max-width:720px;
+    margin:0 auto;
+}
+.top img{
+    width:100%;
+    height:auto;
+}
+.happey-tit{
+    font-size:.7rem;
+    text-align:center;
+    color:#fff;
+    font-weight:600;
+}
+#container{
+    width:14.5rem;
+    height:14.5rem;
+    background-color:#a30814;
+    overflow:hidden;
+    margin:.5rem auto 1rem;
+    border-radius:.2rem;
+}
+#oUl{
+    width:13.5rem;
+    height:13.5rem;
+    background-color:#d32424;
+    margin:.5rem auto;
+    border-radius:.2rem;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+#oUl::after{
+    content:'';
+    height:0;
+    display:block;
+    visibility:hidden;
+    clear:both;
+}
+#oUl li,#oUl a{
+    width:33.3%;
+    float:left;
+    height:4.5rem;
+    display:inline-block;
+    font-size:.6rem;
+    text-align:center;
+    line-height:1.5rem;
+    border-left:2px solid #a30814;
+    border-bottom:2px solid #a30814;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+#oUl li img{
+    max-width:4rem;
+    height:2rem;
+    display:block;
+    margin:.3rem auto;
+}
+#oUl li p{
+    white-space:nowrap;
+    overflow:hidden;
+}
+#oUl a{
+    line-height:4.5rem;
+    font-size:.8rem;
+    color:#f9e38b;
+}
+#oUl li.act{
+    box-shadow:0 0 2rem #fff inset;
+}
+.lottery{
+    background-color:#f9e38b;
+    width:90%;
+    margin:1rem auto .5rem;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    border-radius:.1rem;
+    padding-bottom:.5rem;
+    border:10px solid #d32424;
+}
+.lottery h3{
+    font-weight:500;
+    line-height:1rem;
+    font-size:.7rem;
+    text-align:left;
+    color:#a30814;
+    padding:.5rem;
+    border-bottom:1px solid #d32424;
+    margin-bottom:.5rem;
+}
+.lottery h3 a{
+    color:grey;
+    font-size:.6rem;
+    line-height:1rem;
+    padding-left:.5rem;
+    float:right;
+    margin-top:-0.3rem;
+
+}
+.lottery h3 a img{
+    width:1.6rem;
+    height:auto;
+}
+.swiper-container{height:6rem;overflow:hidden;}
+.swiper-wrapper{
+}
+.swiper-slide p{
+    line-height:.8rem;
+    font-size:.6rem;
+    padding:0rem .5rem;
+    color:#d32424;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+.swiper-slide p b{
+    color:#c92d24;
+    margin:0 .3rem;
+}
+.swiper-slide p span{
+    float:right;
+    font-size:.5rem;
+}
+.lottery-rules{
+    width:90%;
+    margin:0 auto;
+    padding:.5rem;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+.lottery-rules a{
+    width:5.2rem;
+    height:1.8rem;
+    line-height:1.8rem;
+    white-space:nowrap;
+    border-radius:.9rem;
+    background-color:#d32424;
+    box-shadow:0 0 1rem rgba(249, 227, 139, 0.6) inset;
+    display:inline-block;
+    color:#fff;
+    text-align:center;
+    font-size:.7rem;
+}
+/*抽奖页面结束*/
+/*活动规则  开始*/
+.head-tit{
+    text-align:center;
+    line-height:1.2rem;
+    font-size:.8rem;
+    padding:.5rem;
+}
+section{
+    padding:.5rem;
+    width:90%;
+    display:block;
+    margin:0 auto;
+    color:#fff;
+}
+section h3{
+    font-size:.7rem;
+    line-height:1.2rem;
+    font-weight:600;
+}
+.activy-time span{
+    color:#a30814;
+    font-weight:normal;
+}
+section p{
+    font-size:.65rem;
+    color:#a30814;
+    line-height:1.2rem;
+}
+/*活动规则  结束*/
+/*弹窗开始*/
+.alert-warpper{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:8;
+    display:none;
+}
+.alert-bg{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:9;
+    background-color:rgba(0, 0, 0, 0.6);
+}
+.alert-main{
+    position:absolute;
+    z-index:11;
+    background-color:#d32424;
+    width:10rem;
+    min-height:3rem;
+    left:50%;
+    top:40%;
+    margin-left:-5rem;
+    padding:.5rem;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    border-radius:.3rem;
+}
+.alert-main img{
+    width:auto;
+   max-width:10rem;
+    height:3rem;
+    display:block;
+    margin:-2.3rem auto .5rem;
+}
+.alert-main section{
+    font-size:.7rem;
+    text-align:center;
+    line-height:1rem;
+}
+.alert-btn{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:.5rem;
+}
+.alert-btn button,.alert-btn a,.alert-btn[input="button"]{
+    width:4rem;
+    height:1.6rem;
+    line-height:1.6rem;
+    background-color:#fff;
+    appearance:none;
+    -webkit-appearance:none;
+    border:none;
+    font-size:.7rem;
+    border-radius:.8rem;
+    font-family:"Microsoft yahei";
+    text-align:center;
+}
+.alert-btn button{
+    background-color:#a30814;
+    color:#fff;
+    cursor:pointer;
+}
+.alert-btn a{
+    background-color:#f9e38b;
+    color:#d32424;
+    cursor:pointer;
+}
+.alert-main p{
+    font-size:.5rem;
+    color:#f9e38b;
+    margin-top:.3rem;
+}
+.alert-close{
+    position:absolute;
+    z-index:10;
+    bottom:-4.5rem;
+    left:25%;
+    width:50%;
+    text-align:center;
+}
+.alert-close s{
+    width:2px;
+    height:3rem;
+    display:block;
+    margin:0 auto;
+    background-color:#fff;
+}
+.alert-close i{
+    display:inline-block;
+    background-image:url(img/alert-close.png);
+    background-repeat:no-repeat;
+    background-size:100%;
+    width:1.2rem;
+    height:1.2rem;
+}
+
+/*弹窗结束*/
+/*分享弹窗  开始*/
+#mcover{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0, 0, 0, 0.7);
+    z-index:10;
+}
+#mcover img{
+    position:fixed;
+    right:18px;
+    top:5px;
+    width:8rem;
+    display:block;
+    height:auto;
+    z-index:11;
+}
+/*分享弹窗  结束*/
